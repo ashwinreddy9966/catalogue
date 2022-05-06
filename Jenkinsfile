@@ -1,12 +1,12 @@
 @Library('roboshop-shared-library@main') _
-
-pipeline {
-agent any
-    stages {
-        stage('Lint Checks'){
-        steps {
-        script { nodejs.lintCheck('catalogue') }
-           }
-        }
-    } // end of stages
-}
+nodejs('catalogue')
+// pipeline {
+// agent any
+//     stages {
+//         stage('Lint Checks'){
+//         steps {
+//         script { nodejs.lintCheck('catalogue') }
+//            }
+//         }
+//     } // end of stages
+// }
