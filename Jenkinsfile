@@ -5,7 +5,7 @@ agent any
     stages {
         stage('Lint Checks'){
         steps {
-        script { nodejs.info('catalogue') }
+        script { nodejs.lintCheck('catalogue') }
            }
         }
     } // end of stages
