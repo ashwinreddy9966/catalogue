@@ -11,7 +11,7 @@ This service is written in NodeJS, Hence need to install NodeJS in the system.
 ```
 
 
-Let's now set up the catalogue application.
+Lets now set up the catalogue application.
 
 As part of operating system standards, we run all the applications and databases as a normal user but not with root user.
 
