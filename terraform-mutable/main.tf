@@ -1,4 +1,4 @@
-module "cart" {
+module "catalogue" {
   source                = "./vendor/modules/app"
   ENV                   = var.ENV
   INSTANCE_TYPE         = var.INSTANCE_TYPE
