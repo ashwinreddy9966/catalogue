@@ -129,20 +129,20 @@ app.get('/search/:text', (req, res) => {
 });
 
 // set up Mongo
-//function mongoConnect() {
-//    return new Promise((resolve, reject) => {
-//        var mongoURL = process.env.MONGO_URL || 'mongodb://mongodb:27017/catalogue';
-//        mongoClient.connect(mongoURL, (error, client) => {
-//            if(error) {
-//                reject(error);
-//            } else {
-//                db = client.db('catalogue');
-//                collection = db.collection('products');
-//                resolve('connected');
-//            }
-//        });
-//    });
-//}
+// function mongoConnect() {
+//     return new Promise((resolve, reject) => {
+//         var mongoURL = process.env.MONGO_URL || 'mongodb://mongodb:27017/catalogue';
+//         mongoClient.connect(mongoURL, (error, client) => {
+//             if(error) {
+//                 reject(error);
+//             } else {
+//                 db = client.db('catalogue');
+//                 collection = db.collection('products');
+//                 resolve('connected');
+//             }
+//         });
+//     });
+// }
 
 function mongoConnect() {
     return new Promise((resolve, reject) => {
@@ -165,9 +165,6 @@ function mongoConnect() {
 });
 }
 
-
-
-
 // mongodb connection retry loop
 function mongoLoop() {
     mongoConnect().then((r) => {
@@ -186,4 +183,3 @@ const port = process.env.CATALOGUE_SERVER_PORT || '8080';
 app.listen(port, () => {
     logger.info('Started on port', port);
 });
-
